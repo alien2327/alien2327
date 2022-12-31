@@ -25,15 +25,15 @@ Feel free to contact me! 📫
 - Applying state-of-the-art machine learning tools for analysis of physical phenomena
 
 ### 💻 My Programming Skills
-- C/C++
-- Python
-- Fortran
+- C/C++ for development of analysis tools, simulation, ROOT(cern), Unreal engine, etc...
+- Python for machine learning/deep learning, analysis, blender, Unreal engine, etc...
+- Fortran for analysis, simulation, etc...
 - What I'm studying...
-  - CUDA
-  - Rust
-  - Go
-  - Haskell
+  - CUDA for handling GPU for fast calculation,
+  - Rust, Go for hobby,
+  - Haskell, Erlang for study functional programming.
 
 ### 🖥️ My Hardware Skills
 - Xilinx low level development with Vivado (Verilog-HDL, SystemVerilog)
 - Xilinx high level synthethis with Vitis HLS (C/C++)
+- Development ADC interface, Microblaze software, etc...
