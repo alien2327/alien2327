@@ -85,3 +85,5 @@ if [ $INSTALL_FORTRAN_LSP -eq 1 ]; then
 fi
 
 source ~/.bashrc
+
+vim -c $CocInstall
