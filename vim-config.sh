@@ -17,6 +17,8 @@ INSTALL_SQL_LSP=1
 
 apt-get update && apt-get install -y tmux vim neovim
 
+echo "alias vi=nvim" >> $HOME/.bashrc
+echo "alias vim=nvim" >> $HOME/.bashrc
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
 echo "export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH" >> $HOME/.bashrc
