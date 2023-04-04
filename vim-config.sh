@@ -36,7 +36,7 @@ sed -i 's/\r$//' $HOME/.config/nvim/init.vim
 
 source $HOME/.bashrc
 
-nvim -c "PlugInstall --sync | q | qa!"
+nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
 
 echo "set background=dark" >> $HOME/.config/nvim/init.vim
 echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
