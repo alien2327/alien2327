@@ -4,9 +4,9 @@ import os
 home_dir = os.environ['HOME']
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--config_fortran", type=int, default=1)
-parser.add_argument("--config_dockerfile", type=int, default=1)
-parser.add_argument("--config_svlangserver", type=int, default=1)
+parser.add_argument("-f", "--config_fortran", type=int, default=1)
+parser.add_argument("-d", "--config_dockerfile", type=int, default=1)
+parser.add_argument("-s", "--config_svlangserver", type=int, default=1)
 
 def lsp(f):
     def wrapper(*args, **kwargs):
