@@ -15,7 +15,7 @@ INSTALL_RUST_LSP=1
 INSTALL_SV_LSP=1
 INSTALL_SQL_LSP=1
 
-apt-get update && apt-get install -y vim neovim
+apt-get update && apt-get install -y tmux vim neovim
 
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
