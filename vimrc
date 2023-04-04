@@ -76,6 +76,8 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+nmap <F5> :!python3 %<CR>
+
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <silent> gd <Plug>(coc-definition)
