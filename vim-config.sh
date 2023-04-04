@@ -90,4 +90,5 @@ python3 vim-config.py \
     --config_dockerfile=$INSTALL_DOCKER_LSP \
     --config_svlangserver=$INSTALL_SV_LSP
 
+pip install jupyter
 source ~/.bashrc
