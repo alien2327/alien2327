@@ -30,6 +30,9 @@ source $HOME/.bashrc
 
 vim -c "PlugInstall" -c "qa!"
 
+echo "set background=dark" >> $HOME/.vimrc
+echo "colorscheme gruvbox" >> $HOME/.vimrc
+
 if [ $INSTALL_JSON_LSP -eq 1 ]; then
     vim -es -c "call coc#util#install('coc-json', 1)" -c 'qa!'
 fi
