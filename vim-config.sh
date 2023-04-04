@@ -17,13 +17,15 @@ INSTALL_SQL_LSP=1
 
 echo "export TERM=xterm-256color" >> ~/.bashrc
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 curl -sL install-node.vercel.app/lts | bash
 
-curl -fLo ~/.vimrc \
+curl -fLo $HOME/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
+
+source $HOME/.bashrc
 
 vim -c "PlugInstall" -c "qa!"
 
@@ -83,12 +85,10 @@ fi
 
 vim -c $CocInstall -c "qa!"
 
-curl -fLo vim-config.py \
+curl -fLo $HOME/.vim/vim-config.py \
     https://raw.githubusercontent.com/alien2327/alien2327/main/vim-config.py
-python3 vim-config.py \
+python3 $HOME/.vim/vim-config.py \
     --config_fortran=$INSTALL_FORTRAN_LSP \
     --config_dockerfile=$INSTALL_DOCKER_LSP \
     --config_svlangserver=$INSTALL_SV_LSP
-
 pip install jupyter
-source ~/.bashrc
