@@ -16,7 +16,7 @@ INSTALL_SV_LSP=1
 INSTALL_SQL_LSP=1
 
 if [[ $EUID -eq 0 ]]; then
-        apt-get update && apt-get install -y vim
+        apt-get update && apt-get install -y vim neovim
 else
         git clone https://github.com/vim/vim.git
         cd vim && \
@@ -36,9 +36,9 @@ curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
 mkdir -p $HOME/.local
 curl -sL install-node.vercel.app/lts | bash -s -- -y
 
-curl -fLo $HOME/.vimrc \
+curl -fLo $HOME/.config/nvim/init.vim \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
-sed -i 's/\r$//' $HOME/.vimrc
+sed -i 's/\r$//' $HOME/.config/nvim/init.vim
 
 source $HOME/.bashrc
 
