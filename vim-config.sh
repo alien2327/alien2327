@@ -36,11 +36,6 @@ sed -i 's/\r$//' $HOME/.config/nvim/init.vim
 
 source $HOME/.bashrc
 
-nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
-
-echo "set background=dark" >> $HOME/.config/nvim/init.vim
-echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
-
 CocInstall="CocInstall "
 
 if [[ $INSTALL_JSON_LSP -eq 1 ]]; then
@@ -106,6 +101,9 @@ pip install jupyter --quiet
 
 source $HOME/.bashrc
 
+nvim -i NONE -c "PlugInstall" -c "qa"
+echo "set background=dark" >> $HOME/.config/nvim/init.vim
+echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
 echo "Installing coc-lsp server with:"
-echo "nvim -c $CocInstall -c \"q\" -c \"qa!\""
+echo "nvim -c $CocInstall -c \"qa!\""
 nvim -c $CocInstall -c "q" -c "qa!"
