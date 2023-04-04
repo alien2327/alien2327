@@ -97,7 +97,7 @@ if [[ $INSTALL_SV_LSP -eq 1 ]]; then
 fi
 
 if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
-    pip3 install fortran-language-server
+    pip3 install fortran-language-server --quiet
 fi
 
 vim -c $CocInstall -c "qa!"
@@ -108,6 +108,6 @@ python3 $HOME/.vim/vim-config.py \
     --config_fortran=$INSTALL_FORTRAN_LSP \
     --config_dockerfile=$INSTALL_DOCKER_LSP \
     --config_svlangserver=$INSTALL_SV_LSP
-pip install jupyter
+pip install jupyter --quiet
 
 source $HOME/.bashrc
