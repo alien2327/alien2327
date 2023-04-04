@@ -41,41 +41,41 @@ sed -i 's/\r$//' $HOME/.vimrc
 
 source $HOME/.bashrc
 
-vim -c "PlugInstall" -c "qa!"
+vim -c "PlugInstall | q | qa!"
 
 echo "set background=dark" >> $HOME/.vimrc
 echo "colorscheme gruvbox" >> $HOME/.vimrc
 
 if [[ $INSTALL_JSON_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-json', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-json', 1) | qa!"
 fi
 
 if [[ $INSTALL_HTML_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-html', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-html', 1) | qa!"
 fi
 
 if [[ $INSTALL_JAVA_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-java', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-java', 1) | qa!"
 fi
 
 if [[ $INSTALL_TS_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-tsserver', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-tsserver', 1) | qa!"
 fi
 
 if [[ $INSTALL_BASH_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-sh', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-sh', 1) | qa!"
 fi
 
 if [[ $INSTALL_CMAKE_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-cmake', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-cmake', 1) | qa!"
 fi
 
 if [[ $INSTALL_GOLANG_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-go', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-go', 1) | qa!"
 fi
 
 if [[ $INSTALL_PY_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-pyright', 1)" -c 'qa!'
+    vim -es -c "call coc#util#install('coc-pyright', 1) | qa!"
 fi
 
 if [[ $INSTALL_DOCKER_LSP -eq 1 ]]; then
@@ -83,7 +83,7 @@ if [[ $INSTALL_DOCKER_LSP -eq 1 ]]; then
 fi
 
 if [[ $INSTALL_CLANG_LSP -eq 1 ]]; then
-    vim -es -c "call coc#util#install('coc-clangd', 1)" -c 'qa!' 
+    vim -es -c "call coc#util#install('coc-clangd', 1) | qa!"
 
     if [[ $EUID -eq 0 ]]; then
         apt-get install -y clangd
