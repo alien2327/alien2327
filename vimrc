@@ -17,9 +17,6 @@ if !has('gui_running')
     set t_Co=256
 endif
 
-set background=dark
-colorscheme gruvbox
-
 syntax on
 set expandtab
 set shiftwidth=4
