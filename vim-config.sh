@@ -15,14 +15,7 @@ INSTALL_RUST_LSP=1
 INSTALL_SV_LSP=1
 INSTALL_SQL_LSP=1
 
-if [[ $EUID -eq 0 ]]; then
-        apt-get update && apt-get install -y vim neovim
-else
-        git clone https://github.com/vim/vim.git
-        cd vim && \
-        ./configure --prefix=$HOME/.local && \
-        make install
-fi
+apt-get update && apt-get install -y vim neovim
 
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
@@ -42,10 +35,10 @@ sed -i 's/\r$//' $HOME/.config/nvim/init.vim
 
 source $HOME/.bashrc
 
-vim -c "PlugInstall" -c "q" -c "qa!"
+nvim -c "PlugInstall --sync | q | qa!"
 
-echo "set background=dark" >> $HOME/.vimrc
-echo "colorscheme gruvbox" >> $HOME/.vimrc
+echo "set background=dark" >> $HOME/.config/nvim/init.vim
+echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
 
 CocInstall="CocInstall "
 
@@ -103,12 +96,12 @@ if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
 fi
 
 echo "Installing coc-lsp server with:"
-echo "vim -c $CocInstall -c \"q\" -c \"qa!\""
-vim -c $CocInstall -c "q" -c "qa!"
+echo "nvim -c $CocInstall -c \"q\" -c \"qa!\""
+nvim -c $CocInstall -c "q" -c "qa!"
 
-curl -fLo $HOME/.vim/vim-config.py \
+curl -fLo $HOME/.config/nvim/vim-config.py \
     https://raw.githubusercontent.com/alien2327/alien2327/main/vim-config.py
-python3 $HOME/.vim/vim-config.py \
+python3 $HOME/.config/nvim/vim-config.py \
     --config_fortran=$INSTALL_FORTRAN_LSP \
     --config_dockerfile=$INSTALL_DOCKER_LSP \
     --config_svlangserver=$INSTALL_SV_LSP
