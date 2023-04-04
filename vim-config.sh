@@ -101,10 +101,12 @@ pip install jupyter --quiet
 
 source $HOME/.bashrc
 
-cmd="nvim -c \"PlugInstall | q\" -c \"source %\" -c \"$CocInstall\""
+cmd1="nvim -c \"PlugInstall" -c \"qa!"
+cmd2="nvim -c \"$CocInstall\""
 echo "set background=dark" >> $HOME/.config/nvim/init.vim
 echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
 
 echo "Copy the command below, and paste to the terminal, and press enter."
 ehco "This should install the required pluggins and lsp for (neo)vim."
-echo $cmd
+echo $cmd1
+echo $cmd2
