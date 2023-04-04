@@ -30,7 +30,7 @@ mkdir -p $HOME/.local
 curl -sL install-node.vercel.app/lts | bash -s -- -y
 
 curl -fLo $HOME/.config/nvim/init.vim \
-        https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
+        https://raw.githubusercontent.com/alien2327/alien2327/main/init.vim
 sed -i 's/\r$//' $HOME/.config/nvim/init.vim
 
 source $HOME/.bashrc
@@ -95,10 +95,6 @@ if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
     pip3 install fortran-language-server --quiet
 fi
 
-echo "Installing coc-lsp server with:"
-echo "nvim -c $CocInstall -c \"q\" -c \"qa!\""
-nvim -c $CocInstall -c "q" -c "qa!"
-
 curl -fLo $HOME/.config/nvim/vim-config.py \
     https://raw.githubusercontent.com/alien2327/alien2327/main/vim-config.py
 python3 $HOME/.config/nvim/vim-config.py \
@@ -108,3 +104,7 @@ python3 $HOME/.config/nvim/vim-config.py \
 pip install jupyter --quiet
 
 source $HOME/.bashrc
+
+echo "Installing coc-lsp server with:"
+echo "nvim -c $CocInstall -c \"q\" -c \"qa!\""
+nvim -c $CocInstall -c "q" -c "qa!"
