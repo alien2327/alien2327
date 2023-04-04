@@ -84,6 +84,7 @@ if [ $INSTALL_FORTRAN_LSP -eq 1 ]; then
     pip install fortran-language-server
 fi
 
-source ~/.bashrc
-
+echo $CocInstall
 vim -c $CocInstall
+
+source ~/.bashrc
