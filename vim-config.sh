@@ -20,7 +20,7 @@ echo "export TERM=xterm-256color" >> ~/.bashrc
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-curl -sL install-node.vercel.app/lts | bash
+curl -sL install-node.vercel.app/lts | bash -s -- -y
 
 curl -fLo $HOME/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
