@@ -37,3 +37,5 @@ Feel free to contact me! 📫
 - Xilinx low level development with Vivado (Verilog-HDL, SystemVerilog)
 - Xilinx high level synthethis with Vitis HLS (C/C++)
 - Development ADC interface, Microblaze software, etc...
+
+VIM: bit.ly/40FsqCv
