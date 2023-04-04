@@ -42,7 +42,7 @@ sed -i 's/\r$//' $HOME/.vimrc
 
 source $HOME/.bashrc
 
-vim -c "PlugInstall | q | qa!"
+vim -es -c "PlugInstall | q | qa!"
 
 echo "set background=dark" >> $HOME/.vimrc
 echo "colorscheme gruvbox" >> $HOME/.vimrc
