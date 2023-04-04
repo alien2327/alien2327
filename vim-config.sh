@@ -26,8 +26,6 @@ curl -fLo ~/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
 sed -i 's/\r$//' ~/.vimrc
 
-vim -es -c "PlugInstall" -c "q!"
-
 CocInstall="CocInstall "
 
 if [ $INSTALL_JSON_LSP -eq 1 ]; then
@@ -84,6 +82,7 @@ if [ $INSTALL_FORTRAN_LSP -eq 1 ]; then
     pip install fortran-language-server
 fi
 
-vim -es -c $CocInstall
+vim -es -c "PlugInstall" -c "qa!"
+vim -es -c $CocInstall -c "qa!"
 
 source ~/.bashrc
