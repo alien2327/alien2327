@@ -26,6 +26,9 @@ curl -fLo ~/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
 sed -i 's/\r$//' ~/.vimrc
 
+curl -fLo vim-config.py \
+        https://raw.githubusercontent.com/alien2327/alien2327/main/vim-config.py
+
 CocInstall="CocInstall "
 
 if [[ $INSTALL_JSON_LSP -eq 1 ]]; then
@@ -82,7 +85,11 @@ if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
     pip install fortran-language-server
 fi
 
-vim -es -c "PlugInstall" -c "qa!"
-vim -es -c $CocInstall -c "qa!"
+vim -c "PlugInstall" -c "qa!"
+vim -c $CocInstall -c "qa!"
+python3 vim-config.py \ 
+        --config_fortran=$INSTALL_FORTRAN_LSP \
+        --config_dockerfile=$INSTALL_DOCKER_LSP \
+        --config_svlangserver=$INSTALL_SV_LSP
 
 source ~/.bashrc
