@@ -28,6 +28,8 @@ echo "export TERM=xterm-256color" >> $HOME/.bashrc
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
 echo "export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH" >> $HOME/.bashrc
 
+source $HOME/.bashrc
+
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -107,3 +109,5 @@ python3 $HOME/.vim/vim-config.py \
     --config_dockerfile=$INSTALL_DOCKER_LSP \
     --config_svlangserver=$INSTALL_SV_LSP
 pip install jupyter
+
+source $HOME/.bashrc
