@@ -28,43 +28,43 @@ sed -i 's/\r$//' ~/.vimrc
 
 CocInstall="CocInstall "
 
-if [ $INSTALL_JSON_LSP -eq 1 ]; then
+if [[ $INSTALL_JSON_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-json "
 fi
 
-if [ $INSTALL_HTML_LSP -eq 1 ]; then
+if [[ $INSTALL_HTML_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-html "
 fi
 
-if [ $INSTALL_JAVA_LSP -eq 1 ]; then
+if [[ $INSTALL_JAVA_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-java "
 fi
 
-if [ $INSTALL_TS_LSP -eq 1 ]; then
+if [[ $INSTALL_TS_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-tsserver "
 fi
 
-if [ $INSTALL_BASH_LSP -eq 1]; then
+if [[ $INSTALL_BASH_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-sh "
 fi
 
-if [ $INSTALL_CMAKE_LSP -eq 1 ]; then
+if [[ $INSTALL_CMAKE_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-cmake "
 fi
 
-if [ $INSTALL_GOLANG_LSP -eq 1 ]; then
+if [[ $INSTALL_GOLANG_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-go "
 fi
 
-if [ $INSTALL_PY_LSP -eq 1 ]; then
+if [[ $INSTALL_PY_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-pyright "
 fi
 
-if [ $INSTALL_DOCKER_LSP -eq 1 ]; then
+if [[ $INSTALL_DOCKER_LSP -eq 1 ]]; then
     npm install -g dockerfile-language-server-nodejs
 fi
 
-if [ $INSTALL_CLANG_LSP -eq 1 ]; then
+if [[ $INSTALL_CLANG_LSP -eq 1 ]]; then
     CocInstall=$CocInstall"coc-clangd "
     
     if [[ $EUID -eq 0 ]]; then
@@ -74,11 +74,11 @@ if [ $INSTALL_CLANG_LSP -eq 1 ]; then
     fi
 fi
 
-if [ $INSTALL_SV_LSP -eq 1 ]; then
+if [[ $INSTALL_SV_LSP -eq 1 ]]; then
     npm install -g @imc-trading/svlangserver
 fi
 
-if [ $INSTALL_FORTRAN_LSP -eq 1 ]; then
+if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
     pip install fortran-language-server
 fi
 
