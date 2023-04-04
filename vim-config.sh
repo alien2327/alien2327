@@ -101,7 +101,7 @@ pip install jupyter --quiet
 
 source $HOME/.bashrc
 
-nvim -i NONE -c "PlugInstall" -c "qa"
+nvim -i NONE -c "PlugInstall" -c "qa!"
 echo "set background=dark" >> $HOME/.config/nvim/init.vim
 echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
 echo "Installing coc-lsp server with:"
