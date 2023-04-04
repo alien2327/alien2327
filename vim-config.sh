@@ -15,7 +15,18 @@ export INSTALL_RUST_LSP=1
 export INSTALL_SV_LSP=1
 export INSTALL_SQL_LSP=1
 
-echo "export TERM=xterm-256color" >> ~/.bashrc
+if [[ $EUID -eq 0 ]]; then
+        apt-get update && install -y vim
+else
+        git clone https://github.com/vim/vim.git
+        cd vim && \
+        ./configure --prefix=$HOME/.local && \
+        make install
+fi
+
+echo "export TERM=xterm-256color" >> $HOME/.bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
+echo "export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH" >> $HOME/.bashrc
 
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
