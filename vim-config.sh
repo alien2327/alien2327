@@ -22,10 +22,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 curl -sL install-node.vercel.app/lts | bash
 
-curl -fLo ~/.vimrc \
-        https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
-sed -i 's/\r$//' ~/.vimrc
-
 curl -fLo vim-config.py \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vim-config.py
 
@@ -85,7 +81,11 @@ if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
     pip install fortran-language-server
 fi
 
+curl -fLo ~/.vimrc \
+        https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc && \
+sed -i 's/\r$//' ~/.vimrc && \
 vim -c "PlugInstall" -c "qa!"
+
 vim -c "$CocInstall" -c "qa!"
 python3 vim-config.py \ 
         --config_fortran $INSTALL_FORTRAN_LSP \
