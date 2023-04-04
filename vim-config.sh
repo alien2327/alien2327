@@ -29,6 +29,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 mkdir -p $HOME/.local
 curl -sL install-node.vercel.app/lts | bash -s -- -y
 
+mkdir -p $HOME/.config/nvim
 curl -fLo $HOME/.config/nvim/init.vim \
         https://raw.githubusercontent.com/alien2327/alien2327/main/init.vim
 sed -i 's/\r$//' $HOME/.config/nvim/init.vim
