@@ -16,7 +16,7 @@ export INSTALL_SV_LSP=1
 export INSTALL_SQL_LSP=1
 
 if [[ $EUID -eq 0 ]]; then
-        apt-get update && install -y vim
+        apt-get update && apt-get install -y vim
 else
         git clone https://github.com/vim/vim.git
         cd vim && \
