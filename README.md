@@ -38,5 +38,4 @@ Feel free to contact me! 📫
 - Xilinx high level synthethis with Vitis HLS (C/C++)
 - Development ADC interface, Microblaze software, etc...
 
-VIM cmd:
-- curl -sL bit.ly/3Kg4E9s | bash
+VIM cmd: `curl -sL bit.ly/3Kg4E9s | bash`
