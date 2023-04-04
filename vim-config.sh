@@ -47,36 +47,38 @@ vim -c "PlugInstall" -c "q" -c "qa!"
 echo "set background=dark" >> $HOME/.vimrc
 echo "colorscheme gruvbox" >> $HOME/.vimrc
 
+CocInstall="CocInstall "
+
 if [[ $INSTALL_JSON_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-json', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-json "
 fi
 
 if [[ $INSTALL_HTML_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-html', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-html "
 fi
 
 if [[ $INSTALL_JAVA_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-java', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-java "
 fi
 
 if [[ $INSTALL_TS_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-tsserver', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-tsserver "
 fi
 
 if [[ $INSTALL_BASH_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-sh', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-sh "
 fi
 
 if [[ $INSTALL_CMAKE_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-cmake', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-cmake "
 fi
 
 if [[ $INSTALL_GOLANG_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-go', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-go "
 fi
 
 if [[ $INSTALL_PY_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-pyright', 1)" -c "qa!"
+CocInstall=$CocInstall"coc-pyright "
 fi
 
 if [[ $INSTALL_DOCKER_LSP -eq 1 ]]; then
@@ -84,12 +86,11 @@ if [[ $INSTALL_DOCKER_LSP -eq 1 ]]; then
 fi
 
 if [[ $INSTALL_CLANG_LSP -eq 1 ]]; then
-    vim -c "call coc#util#install('coc-clangd', 1)" -c "qa!"
-
+CocInstall=$CocInstall"coc-clangd "
     if [[ $EUID -eq 0 ]]; then
-        apt-get install -y clangd
+    apt-get install -y clangd
     else
-        echo "To use clangd-lsp, run sudo apt install clangd"
+    echo "To use clangd-lsp, run sudo apt install clangd"
     fi
 fi
 
@@ -100,6 +101,10 @@ fi
 if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
     pip3 install fortran-language-server --quiet
 fi
+
+echo "Installing coc-lsp server with:"
+echo "vim -c $CocInstall -c \"q\" -c \"qa!\""
+vim -c $CocInstall -c "q" -c "qa!"
 
 curl -fLo $HOME/.vim/vim-config.py \
     https://raw.githubusercontent.com/alien2327/alien2327/main/vim-config.py
