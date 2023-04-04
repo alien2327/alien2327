@@ -31,7 +31,7 @@ echo "export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH" >> $HOME/.bashrc
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-curl -sL install-node.vercel.app/lts | bash -s -- -y
+curl -sL install-node.vercel.app/lts | bash -s -- -y --prefix=$HOME/.local
 
 curl -fLo $HOME/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
