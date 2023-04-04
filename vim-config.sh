@@ -33,43 +33,43 @@ vim -c "PlugInstall" -c "qa!"
 echo "set background=dark" >> $HOME/.vimrc
 echo "colorscheme gruvbox" >> $HOME/.vimrc
 
-if [ $INSTALL_JSON_LSP -eq 1 ]; then
+if [[ $INSTALL_JSON_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-json', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_HTML_LSP -eq 1 ]; then
+if [[ $INSTALL_HTML_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-html', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_JAVA_LSP -eq 1 ]; then
+if [[ $INSTALL_JAVA_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-java', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_TS_LSP -eq 1 ]; then
+if [[ $INSTALL_TS_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-tsserver', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_BASH_LSP -eq 1]; then
+if [[ $INSTALL_BASH_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-sh', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_CMAKE_LSP -eq 1 ]; then
+if [[ $INSTALL_CMAKE_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-cmake', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_GOLANG_LSP -eq 1 ]; then
+if [[ $INSTALL_GOLANG_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-go', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_PY_LSP -eq 1 ]; then
+if [[ $INSTALL_PY_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-pyright', 1)" -c 'qa!'
 fi
 
-if [ $INSTALL_DOCKER_LSP -eq 1 ]; then
+if [[ $INSTALL_DOCKER_LSP -eq 1 ]]; then
     npm install -g dockerfile-language-server-nodejs
 fi
 
-if [ $INSTALL_CLANG_LSP -eq 1 ]; then
+if [[ $INSTALL_CLANG_LSP -eq 1 ]]; then
     vim -es -c "call coc#util#install('coc-clangd', 1)" -c 'qa!' 
 
     if [[ $EUID -eq 0 ]]; then
@@ -79,11 +79,11 @@ if [ $INSTALL_CLANG_LSP -eq 1 ]; then
     fi
 fi
 
-if [ $INSTALL_SV_LSP -eq 1 ]; then
+if [[ $INSTALL_SV_LSP -eq 1 ]]; then
     npm install -g @imc-trading/svlangserver
 fi
 
-if [ $INSTALL_FORTRAN_LSP -eq 1 ]; then
+if [[ $INSTALL_FORTRAN_LSP -eq 1 ]]; then
     pip3 install fortran-language-server
 fi
 
