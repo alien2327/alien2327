@@ -36,6 +36,10 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+if has("nvim")
+  let g:coc_disable_startup_warning = 1
+endif
+
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutToggle = '<M-e>'
 let g:AutoPairsMatchParen = 1
