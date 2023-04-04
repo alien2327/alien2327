@@ -84,9 +84,9 @@ fi
 curl -fLo ~/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc && \
 sed -i 's/\r$//' ~/.vimrc && \
-vim -c "PlugInstall" -c "qa!"
+vim -es -c "PlugInstall" -c "qa!"
 
-vim -c "$CocInstall" -c "qa!"
+vim -es -c "$CocInstall" -c "qa!"
 python3 vim-config.py \ 
         --config_fortran $INSTALL_FORTRAN_LSP \
         --config_dockerfile $INSTALL_DOCKER_LSP \
