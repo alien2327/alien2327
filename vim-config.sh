@@ -24,6 +24,7 @@ curl -sL install-node.vercel.app/lts | bash
 
 curl -fLo $HOME/.vimrc \
         https://raw.githubusercontent.com/alien2327/alien2327/main/vimrc
+sed -i 's/\r$//' $HOME/.vimrc
 
 source $HOME/.bashrc
 
