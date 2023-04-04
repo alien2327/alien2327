@@ -103,7 +103,7 @@ pip install jupyter --quiet
 
 source $HOME/.bashrc
 
-cmd1="nvim -c \"PlugInstall" -c \"qa!"
+cmd1="nvim -c \"PlugInstall\" -c \"qa!\""
 cmd2="nvim -c \"$CocInstall\""
 echo "set background=dark" >> $HOME/.config/nvim/init.vim
 echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
