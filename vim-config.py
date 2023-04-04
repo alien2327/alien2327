@@ -65,5 +65,5 @@ def config_languageserver(args):
 
 args = parser.parse_args()
 config = config_languageserver(args)
-with open(f"{home_dir}/.config/coc/settings.json", "w") as j:
+with open(f"{home_dir}/.vim/coc-settings.json", "w") as j:
     json.dump(config, j, indent=4, sort_keys=True, separators=(',', ': '))
