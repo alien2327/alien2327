@@ -37,6 +37,25 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+"Open tab
+nmap <Tab-Tab> :tabnew<CR>
+
+"Go to next tab
+nmap <C-Tab> :tabnext<CR>
+nmap <C-l> :tabnext<CR>
+nmap <C-k> :tabnext<CR>
+imap <C-Tab> <ESC>:tabnext<CR>
+imap <C-l> <ESC>:tabnext<CR>
+imap <C-k> <ESC>:tabnext<CR>
+
+"Go to previous tab
+nmap <C-S-Tab> :tabprevious<CR>
+nmap <C-j> :tabprevious<CR>
+nmap <C-h> :tabprevious<CR>
+imap <C-S-Tab> <ESC>:tabprevious<CR>
+imap <C-j> <ESC>:tabprevious<CR>
+imap <C-h> <ESC>:tabprevious<CR>
+
 if has("nvim")
   let g:coc_disable_startup_warning = 1
 endif
