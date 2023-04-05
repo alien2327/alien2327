@@ -16,6 +16,7 @@ Feel free to contact me! 📫
 - Japanese Government (Monbukagakusho:MEXT) Scholarships Program (2019 ~ )
 - Special Researcher for KEK, the High Energy Accelerator Research Organization, Japan (2022 ~ )
 - Machine Learning Engineer(intern) for Datagrid (2021 ~ )
+- Physics-Driven Machine Learning Engineer for EHR&C (Special Research Agent at Korea) (2023 ~ )
 
 ## 👨‍🎓 My Skills
 
