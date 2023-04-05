@@ -20,7 +20,7 @@ Feel free to contact me! 📫
 
 ## 👨‍🎓 My Skills
 
-### 👨‍🔬 My Physics Skills
+### 👨‍🔬 My Academic Skills
 - Working at J-PARC MainRing (MR) for development of 16-electrode beam monitor (hardware)
 - Development of beam profile measurement algorithm with non-destructive ways
 - Applying state-of-the-art machine learning tools for analysis of physical phenomena
