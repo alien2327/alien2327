@@ -13,8 +13,8 @@ Feel free to contact me! 📫
 3. 【Doctoral】High Energy Physics Laboratory, Department of Physics, Faculty of Science, Kyoto University (2021 ~ )
 
 ## 💼 My Career 
-- Japanese Government (Monbukagakusho:MEXT) Scholarships Program (2019 ~ )
-- Special Researcher for KEK, the High Energy Accelerator Research Organization, Japan (2022 ~ )
+- Japanese Government (Monbukagakusho:MEXT) Scholarships Program (2019 ~ 2023)
+- Special Researcher for KEK, the High Energy Accelerator Research Organization, Japan (2022 ~ 2022)
 - Machine Learning Engineer(intern) for Datagrid (2021 ~ )
 - Physics-Driven Machine Learning Engineer for EHR&C (Special Research Agent at Korea) (2023 ~ )
 
