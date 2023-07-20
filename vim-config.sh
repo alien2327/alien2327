@@ -109,6 +109,6 @@ echo "set background=dark" >> $HOME/.config/nvim/init.vim
 echo "colorscheme gruvbox" >> $HOME/.config/nvim/init.vim
 
 echo "Copy the command below, and paste to the terminal, and press enter."
-ehco "This should install the required pluggins and lsp for (neo)vim."
+echo "This should install the required pluggins and lsp for (neo)vim."
 echo $cmd1
 echo $cmd2
